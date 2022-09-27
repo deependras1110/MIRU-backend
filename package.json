@@ -1,0 +1,29 @@
+{
+  "name": "study-abroad-app",
+  "version": "1.0.0",
+  "description": "This is the backend system for the study abroad app",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deependras1110/study-abroad-app.git"
+  },
+  "author": "Deependra Thakur, Nikita Kabir, Isaias Roman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deependras1110/study-abroad-app/issues"
+  },
+  "homepage": "https://github.com/deependras1110/study-abroad-app#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "mongoose": "^6.6.2",
+    "morgan": "^1.10.0",
+    "nodemon": "^2.0.20",
+    "promise": "^8.2.0"
+  }
+}
