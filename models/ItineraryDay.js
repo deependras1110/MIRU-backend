@@ -1,30 +1,33 @@
 const mongoose = require("mongoose");
 
+const activitiesSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+  link: {
+    type: String,
+    required: true,
+    ls,
+  },
+});
+
 const ItineraryDaySchema = new mongoose.Schema(
   {
-    dayTitle: {
-      type: String,
-      require: true,
-      min: 3,
-      max: 20,
-      unique: true,
-    },
     date: {
       type: Date,
       require: true,
+      unique: true,
     },
-    time: {
+    dayTitle: {
       type: String,
     },
-    places: {
-      type: Array,
-      default: [],
-    },
+
     activities: {
-      type: Array,
+      type: [activitiesSchema],
       default: [],
     },
-    additionalInfo: {
+    desc: {
       type: String,
       max: 200,
     },
@@ -33,3 +36,11 @@ const ItineraryDaySchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model("ItineraryDay", ItineraryDaySchema);
+
+fetch(
+  "https://api.apilayer.com/exchangerates_data/latest?symbols={symbols}&base={base}",
+  requestOptions
+)
+  .then((response) => response.text())
+  .then((result) => console.log(result))
+  .catch((error) => console.log("error", error));
