@@ -8,7 +8,6 @@ const activitiesSchema = new mongoose.Schema({
   link: {
     type: String,
     required: true,
-    ls,
   },
 });
 
@@ -36,11 +35,3 @@ const ItineraryDaySchema = new mongoose.Schema(
 );
 
 module.exports = mongoose.model("ItineraryDay", ItineraryDaySchema);
-
-fetch(
-  "https://api.apilayer.com/exchangerates_data/latest?symbols={symbols}&base={base}",
-  requestOptions
-)
-  .then((response) => response.text())
-  .then((result) => console.log(result))
-  .catch((error) => console.log("error", error));
