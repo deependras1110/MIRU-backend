@@ -12,7 +12,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-//get all Itinerary Day
+//get all Itinerary Day/
 router.get("/", async (req, res) => {
   try {
     const fetchedData = await ItineraryDay.find();
